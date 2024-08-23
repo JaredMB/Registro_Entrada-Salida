@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro vehicular de entrada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- LOGO Y TEXTO DE PORTADA -->
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <div class="col">
+                    <img src="../img/logo_secopla.png" class="img-fluid" alt="..." style="width: 150px;">
+                </div>
+            </div>
+            <div class="col">
+                <p class="fs-5 fw-semibold">Registro de entrada</p>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <section class="container text-center">
+        <div>
+            <label for="">Folio:</label>
+        </div>
+        <div>
+            <input id="folio" type="text" name="nacimiento" class="sm-form-control" disabled>
+        </div>
+
+        <!-- SELECCIÓN DE LA CLAVE DE UNIDAD (U100, U101, ETC..) -->
+        <div>
+            <div class="p-2">
+                <label for="">Clave de unidad:</label>
+                <select id="clave_unidad" class="form-select form-select-sm" aria-label="Small select example">
+                    <option selected>Selecciona unidad</option>
+                    <option value="1">U200</option>
+                    <option value="2">U201</option>
+                    <option value="3">U202</option>
+                </select>
+            </div>
+        </div>
+
+        <!------ CAMPOS AUTORELLENABLES CON LA INFO DE LA UNIDAD ------>
+        <div class="row">
+            <div class="col">
+                <label for="">Modelo:</label>
+                <input id="modelo" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" disabled>
+            </div>
+            <div class="col">
+                <label for="">Placas:</label>
+                <input id="placas" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" disabled>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="">No. serie:</label>
+                <input id="num_serie" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" disabled>
+            </div>
+            <div class="col">
+                <label for="">Kilómetros:</label>
+                <input id="km" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" disabled>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="">Responsable:</label>
+                <input id="responsable" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" disabled>
+            </div>
+        </div>
+    </section>
+
+    <!------ INPUTS DE HORA Y FECHA ------>
+    <section class="container text-center">
+        <div>
+            <label for="">Fecha de ingreso:</label>
+        </div>
+        <div>
+            <input id="fecha_ingreso" type="date" name="nacimiento" class="sm-form-control">
+        </div>
+        <div class="p-2">
+            <label for="">Hora de ingreso:</label>
+        </div>
+        <div>
+            <input id="hora_ingreso" type="time" name="hora">
+        </div>
+        <div class="p-2">
+            <label for="">Estatus de servicio:</label>
+            <select id="clave_unidad" class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>Selecciona el estatus de servicio</option>
+                <option value="1">Ingreso de servicio</option>
+                <option value="2">Ingreso al seguro</option>
+                <option value="3">Corralón</option>
+            </select>
+        </div>
+    </section>
+
+    <!------ SECCIÓN DE EVIDENCIAS FOTOGRÁFICAS ------>
+    <br>
+    <section class="container">
+        <div class="text-center">
+            <label for="formFileMultiple" class="form-label">Evidencias:</label>
+            <table>
+                <tr>
+                    <td>
+                        <label for="" class="fw-semibold">Imágen ingreso:</label>
+                        <input id="pic_1" class="form-control" type="file" name="pic1" accept="image/*"
+                            capture="environment">
+                    </td>
+                    <td>
+                        <label for="" class="fw-semibold">Poliza o nota:</label>
+                        <input id="pic_2" class="form-control" type="file" name="pic2" accept="image/*"
+                            capture="environment">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="" class="fw-semibold">Odómetro:</label>
+                        <input id="pic_3" class="form-control" type="file" name="pic3" accept="image/*"
+                            capture="environment">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="container p-3">
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button id="guardar_respuestas" class="btn btn-primary" type="button">Guardar respuestas</button>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
