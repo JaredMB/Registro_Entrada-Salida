@@ -26,12 +26,22 @@
     </section>
     <br>
 
+
+    <!------- INICIO DE CUERPO DEL FORMULARIO ------->
     <section class="container text-center">
         <div>
-            <label for="">Folio:</label>
-        </div>
-        <div>
-            <input id="folio_salida" type="text" name="nacimiento" class="sm-form-control" disabled>
+            <div>
+                <label for="">Folio:</label>
+            </div>
+            <div>
+                <input id="folio_salida" type="text" name="folio" class="sm-form-control" disabled>
+            </div>
+            <div class="p-2">
+                <label for="">Responsable de salida:</label>
+            </div>
+            <div>
+                <input id="resp_ingreso" type="text" class="sm-form-control" disabled>
+            </div>
         </div>
 
         <!-- SELECCIÓN DE LA CLAVE DE UNIDAD (U100, U101, ETC..) -->
@@ -87,7 +97,7 @@
             <label for="">Fecha de salida:</label>
         </div>
         <div>
-            <input id="fecha_salida" type="date" name="nacimiento" class="sm-form-control">
+            <input id="fecha_salida" type="date" name="folio" class="sm-form-control">
         </div>
         <div class="p-2">
             <label for="">Hora de salida:</label>
@@ -97,7 +107,7 @@
         </div>
         <div class="p-2">
             <label for="">Estatus de servicio:</label>
-            <select id="clave_unidad" class="form-select form-select-sm" aria-label="Small select example">
+            <select id="estatus_serv_sal" class="form-select form-select-sm" aria-label="Small select example">
                 <option selected>Selecciona el estatus de servicio</option>
                 <option value="1">Salida de servicio</option>
                 <option value="2">Salida servicio agencia</option>

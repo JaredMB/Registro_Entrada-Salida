@@ -20,18 +20,27 @@
                 </div>
             </div>
             <div class="col">
-                <p class="fs-5 fw-semibold">Registro de entrada</p>
+                <p class="fs-5 fw-semibold text-center">Registro de entrada</p>
             </div>
         </div>
     </section>
     <br>
 
+    <!------- INICIO DE CUERPO DEL FORMULARIO ------->
     <section class="container text-center">
         <div>
-            <label for="">Folio:</label>
-        </div>
-        <div>
-            <input id="folio" type="text" name="nacimiento" class="sm-form-control" disabled>
+            <div>
+                <label for="">Folio:</label>
+            </div>
+            <div>
+                <input id="folio" type="text" name="folio" class="sm-form-control" disabled>
+            </div>
+            <div class="p-2">
+                <label for="">Responsable de ingreso:</label>
+            </div>
+            <div>
+                <input id="resp_ingreso" type="text" class="sm-form-control" disabled>
+            </div>
         </div>
 
         <!-- SELECCIÓN DE LA CLAVE DE UNIDAD (U100, U101, ETC..) -->
@@ -97,7 +106,7 @@
         </div>
         <div class="p-2">
             <label for="">Estatus de servicio:</label>
-            <select id="clave_unidad" class="form-select form-select-sm" aria-label="Small select example">
+            <select id="estatus_serv_ent" class="form-select form-select-sm" aria-label="Small select example">
                 <option selected>Selecciona el estatus de servicio</option>
                 <option value="1">Ingreso de servicio</option>
                 <option value="2">Ingreso al seguro</option>
@@ -108,7 +117,7 @@
 
     <!------ SECCIÓN DE EVIDENCIAS FOTOGRÁFICAS ------>
     <br>
-    <section class="container">
+    <!-- <section class="container">
         <div class="text-center">
             <label for="formFileMultiple" class="form-label">Evidencias:</label>
             <table>
@@ -133,7 +142,35 @@
                 </tr>
             </table>
         </div>
+    </section> -->
+
+    <section class="container">
+        <div class="text-center">
+            <label for="formFileMultiple" class="form-label">Evidencias:</label>
+            <table>
+                <tr>
+                    <td>
+                        <label for="" class="fw-semibold">Imágen salida:</label>
+                        <input id="pic_1" class="form-control" type="file" name="pic1" accept="image/*"
+                            capture="environment">
+                    </td>
+                    <td>
+                        <label for="" class="fw-semibold">Poliza o nota:</label>
+                        <input id="pic_2" class="form-control" type="file" name="pic2" accept="image/*"
+                            capture="environment">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="" class="fw-semibold">Odómetro:</label>
+                        <input id="pic_3" class="form-control" type="file" name="pic3" accept="image/*"
+                            capture="environment">
+                    </td>
+                </tr>
+            </table>
+        </div>
     </section>
+
 
     <section class="container p-3">
         <div class="d-grid gap-2 col-6 mx-auto">
