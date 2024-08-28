@@ -98,15 +98,6 @@
         <div>
             <input id="fecha_hora_ent" type="datetime-local">
         </div>
-        <!-- <div>
-            <input id="fecha_ingreso" type="date" name="nacimiento" class="sm-form-control">
-        </div>
-        <div class="p-2">
-            <label for="">Hora de ingreso:</label>
-        </div>
-        <div>
-            <input id="hora_ingreso" type="time" name="hora">
-        </div> -->
         <div class="p-2">
             <label for="">Estatus de servicio:</label>
             <select id="estatus_serv_ent" class="form-select form-select-sm" aria-label="Small select example">
@@ -120,61 +111,31 @@
 
     <!------ SECCIÓN DE EVIDENCIAS FOTOGRÁFICAS ------>
     <br>
-    <!-- <section class="container">
-        <div class="text-center">
-            <label for="formFileMultiple" class="form-label">Evidencias:</label>
-            <table>
-                <tr>
-                    <td>
-                        <label for="" class="fw-semibold">Imágen ingreso:</label>
-                        <input id="pic_1" class="form-control" type="file" name="pic1" accept="image/*"
-                            capture="environment">
-                    </td>
-                    <td>
-                        <label for="" class="fw-semibold">Poliza o nota:</label>
-                        <input id="pic_2" class="form-control" type="file" name="pic2" accept="image/*"
-                            capture="environment">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="" class="fw-semibold">Odómetro:</label>
-                        <input id="pic_3" class="form-control" type="file" name="pic3" accept="image/*"
-                            capture="environment">
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </section> -->
-
     <section class="container">
         <div class="text-center">
-            <label for="formFileMultiple" class="form-label">Evidencias:</label>
-            <table>
-                <tr>
-                    <td>
-                        <label for="" class="fw-semibold">Imágen salida:</label>
-                        <input id="pic_1" class="form-control" type="file" name="pic1" accept="image/*"
-                            capture="environment">
-                    </td>
-                    <td>
-                        <label for="" class="fw-semibold">Poliza o nota:</label>
-                        <input id="pic_2" class="form-control" type="file" name="pic2" accept="image/*"
-                            capture="environment">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="" class="fw-semibold">Odómetro:</label>
-                        <input id="pic_3" class="form-control" type="file" name="pic3" accept="image/*"
-                            capture="environment">
-                    </td>
-                </tr>
-            </table>
+            <form id="grupo_imagenes">
+                <div>
+                    <label for="" class="fw-semibold">Imágen salida:</label>
+                    <input id="pic_1" type="file" name="image1"  data-id="123" group-id="456" accept="image/*">
+                </div>
+                <div>
+                    <label for="" class="fw-semibold">Poliza o nota:</label>
+                    <input id="pic_2" type="file" name="image2"  accept="image/*">
+                </div>
+                <div>
+                    <label for="" class="fw-semibold">Odómetro:</label>
+                    <input id="pic_3" type="file" name="image3"  accept="image/*">
+                </div>
+
+                <!-- BOTÓN PARA GUARDAR BANCO DE IMÁGENES-->
+                <!-- <div>
+                    <button type="submit">Subir Imágenes</button>
+                </div> -->
+            </form>
         </div>
     </section>
 
-
+    <!------ BOTÓN DE GUARDAR RESPUESTAS ------>
     <section class="container p-3">
         <div class="d-grid gap-2 col-6 mx-auto">
             <button id="guardar_respuestas" class="btn btn-primary" type="button">Guardar respuestas</button>
